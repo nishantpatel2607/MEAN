@@ -5,16 +5,13 @@ var ctrlReviews = require('../controllers/reviews.controllers.js');
 
 router
 .route('/hotels')
-.get(ctrlHotels.hotelsGetAll);
+.get(ctrlHotels.hotelsGetAll)
+.post(ctrlHotels.hotelsAddOne);
 
 router
 .route('/hotels/:hotelId')
 .get(ctrlHotels.hotelsGetOne);
 
-
-router
-	.route('/hotels/new')
-	.post(ctrlHotels.hotelsAddOne);
 
 
 //Review roots
