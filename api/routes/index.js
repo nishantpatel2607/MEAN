@@ -10,7 +10,9 @@ router
 
 router
 .route('/hotels/:hotelId')
-.get(ctrlHotels.hotelsGetOne);
+.get(ctrlHotels.hotelsGetOne)
+.put(ctrlHotels.hotelsUpdateOne)
+.delete(ctrlHotels.hotelsDeleteOne);
 
 
 
@@ -22,7 +24,9 @@ router
 
 router
 .route('/hotels/:hotelId/reviews/:reviewId')
-.get(ctrlReviews.reviewsGetOne);
+.get(ctrlReviews.reviewsGetOne)
+.put(ctrlReviews.reviewsUpdateOne)
+.delete(ctrlReviews.reviewsDeleteOne);
 
 
 module.exports = router;
